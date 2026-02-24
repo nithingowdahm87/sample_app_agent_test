@@ -1,0 +1,83 @@
+{
+  "project_name": "sample_app",
+  "language": "javascript/node",
+  "frameworks": [
+    "react",
+    "express"
+  ],
+  "dependencies": [
+    "react",
+    "pg",
+    "dotenv",
+    "react-dom",
+    "cors",
+    "express"
+  ],
+  "ports": [
+    "3000"
+  ],
+  "env_vars": [],
+  "scripts": {},
+  "file_structure": ".git/COMMIT_EDITMSG\n.git/HEAD\n.git/config\n.git/description\n.git/hooks/applypatch-msg.sample\n.git/hooks/commit-msg.sample\n.git/hooks/fsmonitor-watchman.sample\n.git/hooks/post-update.sample\n.git/hooks/pre-applypatch.sample\n.git/hooks/pre-commit.sample\n.git/hooks/pre-merge-commit.sample\n.git/hooks/pre-push.sample\n.git/hooks/pre-rebase.sample\n.git/hooks/pre-receive.sample\n.git/hooks/prepare-commit-msg.sample\n.git/hooks/push-to-checkout.sample\n.git/hooks/sendemail-validate.sample\n.git/hooks/update.sample\n.git/index\n.git/info/exclude\n.git/logs/HEAD\n.git/logs/refs/heads/master\n.git/logs/refs/remotes/origin/master\n.git/objects/05/22834847e448b9a3a05efe4e825be88251a116\n.git/objects/14/2298f5c3f18517994252a62381c2e2bfac745a\n.git/objects/16/afe4921d7cb93fe4a907e4feb6fd1e973d3ba2\n.git/objects/1a/99e83bd81770396e80da42a99cd640a099de0c\n.git/objects/1a/dac36b200d58f60e5cdf979ab1c9ce073e7bef\n.git/objects/36/ca5531c1380f13d0fcd4bf0be5c162287970e8\n.git/objects/47/8dec79e381ca70aa06568ef6b27377ab366ad4\n.git/objects/48/2d6383a162f974ba1d3e66ee641e1acfb8dca2\n.git/objects/49/48572906c46e14a71455b7a086f719cf80f7e6\n.git/objects/4a/53fade75746218bd30404cd1290f99fe75f48f\n.git/objects/66/d1f10ada7c6f08a2f38a6dadf40df65660989d\n.git/objects/6d/c01a899569668efbf80c1d6d519bc6a10c62e4\n.git/objects/b4/7897bd09527d53e58484afa0d53e946f4fe004\n.git/objects/d0/1bea87d5e9a8408bd00f04c64b63813fd5bb62\n.git/objects/d0/c3220cfeacf19ba0b230d6a2382b20905106bd\n.git/refs/heads/master\n.git/refs/remotes/origin/master\nREADME.md\nbackend/index.js\nbackend/package.json\ndatabase/init.sql\nfrontend/index.html\nfrontend/package.json\nfrontend/src/App.jsx\nfrontend/src/main.jsx\nfrontend/vite.config.js",
+  "raw_context_summary": "No specific project context detected. Treat as generic application.",
+  "existing_files": {},
+  "architecture": [
+    "microservices"
+  ],
+  "microservice_dirs": [
+    "backend",
+    "frontend"
+  ],
+  "microservice_details": {
+    "backend": {
+      "language": "Node.js",
+      "frameworks": [
+        "Express"
+      ],
+      "node_version": "20",
+      "base_image": "node:20-alpine",
+      "ports": [
+        "3000",
+        "5432"
+      ],
+      "key_deps": [
+        "cors",
+        "dotenv",
+        "express",
+        "pg"
+      ],
+      "role": "REST API Server + DB Layer",
+      "databases": [
+        "PostgreSQL"
+      ]
+    },
+    "frontend": {
+      "language": "Node.js",
+      "frameworks": [
+        "React",
+        "Vite"
+      ],
+      "node_version": "20",
+      "base_image": "node:20-alpine → nginx:alpine (runtime)",
+      "ports": [
+        "5173"
+      ],
+      "key_deps": [
+        "react",
+        "react-dom"
+      ],
+      "role": "Frontend Web App (SPA)",
+      "databases": []
+    }
+  },
+  "databases": {
+    "rdbms": {
+      "PostgreSQL": [
+        "backend"
+      ]
+    },
+    "cache": {},
+    "nosql": {},
+    "broker": {}
+  }
+}
