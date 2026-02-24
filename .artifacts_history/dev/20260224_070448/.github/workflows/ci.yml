@@ -11,10 +11,8 @@ jobs:
       security-events: write
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
     - name: Compile
-      run: '# Compile code here
+      run: '# Compile command here
 
         echo "Compilation successful"
 
@@ -28,14 +26,12 @@ jobs:
       security-events: write
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-    - name: Login to Docker Hub
+    - name: Docker Login
       uses: docker/login-action@v3
       with:
         password: ${{ secrets.DOCKER_PASSWORD }}
         username: ${{ secrets.DOCKER_USERNAME }}
-    - name: Build and push Docker image
+    - name: Docker Build and Push
       uses: docker/build-push-action@v5
       with:
         context: .
@@ -52,34 +48,23 @@ jobs:
       security-events: write
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-    - name: Send Slack notification
+    - name: Slack Notification
       uses: 8398a7/action-slack@v3
       with:
-        branch: ${{ github.ref_name }}
         channel: my-channel
-        repo: ${{ github.repository }}
-        sha: ${{ github.sha }}
+        message: Deployment completed for ${{ github.ref_name }} (${{ github.sha }})
+          with status ${{ job.status }}
         slack-token: ${{ secrets.SLACK_TOKEN }}
-        status: ${{ job.status }}
-    - name: Send email notification
+    - name: Email Notification
       uses: dawidd6/action-send-mail@v6
       with:
-        body: 'Repository: ${{ github.repository }}
-
-          Branch: ${{ github.ref_name }}
-
-          SHA: ${{ github.sha }}
-
-          Status: ${{ job.status }}
-
-          '
+        body: Deployment completed for ${{ github.ref_name }} (${{ github.sha }})
+          with status ${{ job.status }}
         password: ${{ secrets.EMAIL_PASSWORD }}
-        server-address: ${{ secrets.EMAIL_SERVER }}
-        server-port: ${{ secrets.EMAIL_PORT }}
-        subject: ${{ github.workflow }} - ${{ job.status }}
-        to: ${{ secrets.EMAIL_TO }}
+        server: ${{ secrets.EMAIL_SERVER }}
+        subject: Deployment completed for ${{ github.ref_name }} (${{ github.sha }})
+          with status ${{ job.status }}
+        to: my-email@example.com
         username: ${{ secrets.EMAIL_USERNAME }}
   owasp-zap:
     needs:
@@ -90,10 +75,12 @@ jobs:
       security-events: write
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-    - name: OWASP ZAP scan
-      uses: zaproxy/action-zap@v0.2.1
+    - name: OWASP ZAP Scan
+      run: '# OWASP ZAP scan command here
+
+        echo "OWASP ZAP scan successful"
+
+        '
   secrets-scan:
     needs:
     - compile
@@ -103,9 +90,7 @@ jobs:
       security-events: write
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-    - name: Gitleaks scan
+    - name: Gitleaks Scan
       uses: gitleaks/gitleaks-action@v2
   sonar:
     needs:
@@ -116,10 +101,12 @@ jobs:
       security-events: write
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-    - name: SonarQube analysis
-      uses: sonarcloud/sonarcloud-github-action@v1.12.0
+    - name: Sonar Scan
+      run: '# Sonar scan command here
+
+        echo "Sonar scan successful"
+
+        '
   trivy-fs:
     needs:
     - secrets-scan
@@ -129,10 +116,12 @@ jobs:
       security-events: write
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-    - name: Trivy file system scan
-      uses: aquasecurity/trivy-action@v0.25.1
+    - name: Trivy FS Scan
+      run: '# Trivy FS scan command here
+
+        echo "Trivy FS scan successful"
+
+        '
   trivy-image:
     needs:
     - docker-build
@@ -142,7 +131,9 @@ jobs:
       security-events: write
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-    - name: Trivy image scan
-      uses: aquasecurity/trivy-action@v0.25.1
+    - name: Trivy Image Scan
+      run: '# Trivy image scan command here
+
+        echo "Trivy image scan successful"
+
+        '

@@ -2,23 +2,23 @@
   "project_name": "sample_app",
   "language": "javascript/node",
   "frameworks": [
-    "react",
-    "express"
+    "express",
+    "react"
   ],
   "dependencies": [
-    "react",
-    "pg",
-    "dotenv",
     "react-dom",
-    "cors",
-    "express"
+    "dotenv",
+    "express",
+    "pg",
+    "react",
+    "cors"
   ],
   "ports": [
     "3000"
   ],
   "env_vars": [],
   "scripts": {},
-  "file_structure": ".git/COMMIT_EDITMSG\n.git/HEAD\n.git/config\n.git/description\n.git/hooks/applypatch-msg.sample\n.git/hooks/commit-msg.sample\n.git/hooks/fsmonitor-watchman.sample\n.git/hooks/post-update.sample\n.git/hooks/pre-applypatch.sample\n.git/hooks/pre-commit.sample\n.git/hooks/pre-merge-commit.sample\n.git/hooks/pre-push.sample\n.git/hooks/pre-rebase.sample\n.git/hooks/pre-receive.sample\n.git/hooks/prepare-commit-msg.sample\n.git/hooks/push-to-checkout.sample\n.git/hooks/sendemail-validate.sample\n.git/hooks/update.sample\n.git/index\n.git/info/exclude\n.git/logs/HEAD\n.git/logs/refs/heads/master\n.git/logs/refs/remotes/origin/master\n.git/objects/05/22834847e448b9a3a05efe4e825be88251a116\n.git/objects/14/2298f5c3f18517994252a62381c2e2bfac745a\n.git/objects/16/afe4921d7cb93fe4a907e4feb6fd1e973d3ba2\n.git/objects/1a/99e83bd81770396e80da42a99cd640a099de0c\n.git/objects/1a/dac36b200d58f60e5cdf979ab1c9ce073e7bef\n.git/objects/36/ca5531c1380f13d0fcd4bf0be5c162287970e8\n.git/objects/47/8dec79e381ca70aa06568ef6b27377ab366ad4\n.git/objects/48/2d6383a162f974ba1d3e66ee641e1acfb8dca2\n.git/objects/49/48572906c46e14a71455b7a086f719cf80f7e6\n.git/objects/4a/53fade75746218bd30404cd1290f99fe75f48f\n.git/objects/66/d1f10ada7c6f08a2f38a6dadf40df65660989d\n.git/objects/6d/c01a899569668efbf80c1d6d519bc6a10c62e4\n.git/objects/b4/7897bd09527d53e58484afa0d53e946f4fe004\n.git/objects/d0/1bea87d5e9a8408bd00f04c64b63813fd5bb62\n.git/objects/d0/c3220cfeacf19ba0b230d6a2382b20905106bd\n.git/refs/heads/master\n.git/refs/remotes/origin/master\nREADME.md\nbackend/index.js\nbackend/package.json\ndatabase/init.sql\nfrontend/index.html\nfrontend/package.json\nfrontend/src/App.jsx\nfrontend/src/main.jsx\nfrontend/vite.config.js",
+  "file_structure": ".git/COMMIT_EDITMSG\n.git/HEAD\n.git/config\n.git/description\n.git/hooks/applypatch-msg.sample\n.git/hooks/commit-msg.sample\n.git/hooks/fsmonitor-watchman.sample\n.git/hooks/post-update.sample\n.git/hooks/pre-applypatch.sample\n.git/hooks/pre-commit.sample\n.git/hooks/pre-merge-commit.sample\n.git/hooks/pre-push.sample\n.git/hooks/pre-rebase.sample\n.git/hooks/pre-receive.sample\n.git/hooks/prepare-commit-msg.sample\n.git/hooks/push-to-checkout.sample\n.git/hooks/sendemail-validate.sample\n.git/hooks/update.sample\n.git/index\n.git/info/exclude\n.git/logs/HEAD\n.git/logs/refs/heads/master\n.git/logs/refs/remotes/origin/master\n.git/objects/00/831ec2ef767764015e5aa6d0f5347692f0accd\n.git/objects/02/3a944b1f374c74db602344dd6f8d88c4036b80\n.git/objects/05/22834847e448b9a3a05efe4e825be88251a116\n.git/objects/05/ee4f8dc826c22cb3910551a2034f04eda97b4a\n.git/objects/0a/5e66c59e657a3f88481820585d60d81a811ba1\n.git/objects/0b/b57930b3120126900e1a0f10f20a9ac3885c41\n.git/objects/0f/aa054faa2f9250309099aea641e527b774c076\n.git/objects/14/2298f5c3f18517994252a62381c2e2bfac745a\n.git/objects/14/8109025c404692d15179bcb3eec0c155150c5b\n.git/objects/16/afe4921d7cb93fe4a907e4feb6fd1e973d3ba2\n.git/objects/17/a36f51aef67ed8ad93217cb25d7b72a48d9837\n.git/objects/1a/99e83bd81770396e80da42a99cd640a099de0c\n.git/objects/1a/dac36b200d58f60e5cdf979ab1c9ce073e7bef\n.git/objects/1e/f4c238ab9a7eddfa090a2e6cae9292c7fd1f2c\n.git/objects/25/306e169d444357165d677167f16ddd01fc5300\n.git/objects/33/aea874eff8c2c0dc2c77a5e2700b9ef4a34a65\n.git/objects/36/8bae047bce93269da727ed9a418f6f47db804d\n.git/objects/36/ca5531c1380f13d0fcd4bf0be5c162287970e8\n.git/objects/3a/2006c71fcf65904b7bfebd7c2afbecf8cbdb67\n.git/objects/41/2dc4206fe59b7d05dd4a9a7a6996c7ea412025\n.git/objects/45/4e9f562408ec5dd27729372690f75d11312f5e\n.git/objects/47/8dec79e381ca70aa06568ef6b27377ab366ad4\n.git/objects/48/2d6383a162f974ba1d3e66ee641e1acfb8dca2\n.git/objects/49/48572906c46e14a71455b7a086f719cf80f7e6\n.git/objects/4a/53fade75746218bd30404cd1290f99fe75f48f\n.git/objects/5c/3c7f54095d8a21b4a3d112bc37eba8e3f71402\n.git/objects/62/276f27bde61276ed78f5a8a672764f9b9f7d6c\n.git/objects/66/d1f10ada7c6f08a2f38a6dadf40df65660989d\n.git/objects/6d/c01a899569668efbf80c1d6d519bc6a10c62e4\n.git/objects/74/c16bc61dd2178168d175b4311822bf0d22f67a\n.git/objects/7b/ba7844e6b3328850ad403d3679b80a45f531c6\n.git/objects/86/62ae3958b841b67002f2a299de7c5e8b110031\n.git/objects/8c/534bb241c1ae6fd681d84327c855aca3296a37\n.git/objects/97/a266d203c49494f689b036bef749fc035489b2\n.git/objects/9c/fe744131935c052fe1f78c2667cd1380c3c313\n.git/objects/a0/3f4acce04d229501abb9cb818bcc0dcc12085b\n.git/objects/a2/a058aebb7d05baef047e4f8f41fd618cd51cae\n.git/objects/aa/12ba564d74488c74fe1a86ea19f4761798d5f8\n.git/objects/b4/7897bd09527d53e58484afa0d53e946f4fe004\n.git/objects/b8/e686bef17e2ff69e77b409583aa146d0e22ebd\n.git/objects/c1/53e054d0f862bfbc27a71bfcf61864a1156563\n.git/objects/c4/047e14fcf8fade5ab63fb682bf76e0adfb2e2a\n.git/objects/c4/3bd3c6a1dfae18ee0168906749e49d9b02e3dd\n.git/objects/cb/d2168b32b44a7d568c04a63fe232dad47f056d\n.git/objects/d0/1bea87d5e9a8408bd00f04c64b63813fd5bb62\n.git/objects/d0/c3220cfeacf19ba0b230d6a2382b20905106bd\n.git/objects/d5/01282b80ab90273ca4e2277abb50c6f1174a6e\n.git/objects/d8/69dfe63b553c42436d0f0a58a86e8584d81c85\n.git/objects/da/f866e7e6f69775e5f3948f92a474d6522681f5\n.git/objects/db/65ec9cdfa091a53ab9352085e27fe0af25a89b\n.git/objects/e7/5c98dad51551f4bade3bf53ed6670d35307193\n.git/objects/f1/e9f77f195ed9f874b523fc50d88cc8bf21071c\n.git/objects/f8/8294510ff73aa5b88c26f5a5761ee7f7d5bdf4\n.git/refs/heads/master\n.git/refs/remotes/origin/master\nREADME.md\nbackend/index.js\nbackend/package.json\ndatabase/init.sql\nfrontend/index.html\nfrontend/package.json\nfrontend/src/App.jsx\nfrontend/src/main.jsx\nfrontend/vite.config.js",
   "raw_context_summary": "No specific project context detected. Treat as generic application.",
   "existing_files": {},
   "architecture": [

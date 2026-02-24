@@ -1,5 +1,6 @@
 networks:
-  backend-net: null
+  backend-net:
+    driver: bridge
   frontend-net:
     driver: bridge
 services:
@@ -97,9 +98,9 @@ services:
       interval: 10s
       retries: 5
       test:
-      - pg_isready
-      - -U
-      - user
+      - curl
+      - -f
+      - http://localhost:5432/healthcheck
       timeout: 5s
     image: postgres:13
     networks:
